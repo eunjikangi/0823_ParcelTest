@@ -1,0 +1,54 @@
+
+(base) gang-eunjiui-MacBookPro:0820_Parcel eun_ji$ npm i -D postcss autoprefixer
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: 0820_parcel@1.0.0
+npm error Found: postcss@7.0.39
+npm error node_modules/postcss
+npm error   postcss@"^7.0.1" from css-declaration-sorter@4.0.1
+npm error   node_modules/css-declaration-sorter
+npm error     css-declaration-sorter@"^4.0.1" from cssnano-preset-default@4.0.8
+npm error     node_modules/cssnano-preset-default
+npm error       cssnano-preset-default@"^4.0.8" from cssnano@4.1.11
+npm error       node_modules/cssnano
+npm error         cssnano@"^4.1.11" from htmlnano@0.2.9
+npm error         node_modules/htmlnano
+npm error         1 more (parcel-bundler)
+npm error   postcss@"^7.0.0" from cssnano@4.1.11
+npm error   node_modules/cssnano
+npm error     cssnano@"^4.1.11" from htmlnano@0.2.9
+npm error     node_modules/htmlnano
+npm error       htmlnano@"^0.2.2" from parcel-bundler@1.12.5
+npm error       node_modules/parcel-bundler
+npm error         dev parcel-bundler@"^1.12.5" from the root project
+npm error     cssnano@"^4.0.0" from parcel-bundler@1.12.5
+npm error     node_modules/parcel-bundler
+npm error       dev parcel-bundler@"^1.12.5" from the root project
+npm error   33 more (cssnano-preset-default, cssnano-util-raw-cache, ...)
+npm error
+npm error Could not resolve dependency:
+npm error dev autoprefixer@"*" from the root project
+npm error
+npm error Conflicting peer dependency: postcss@8.4.41
+npm error node_modules/postcss
+npm error   peer postcss@"^8.1.0" from autoprefixer@10.4.20
+npm error   node_modules/autoprefixer
+npm error     dev autoprefixer@"*" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /Users/eun_ji/.npm/_logs/2024-08-19T23_11_19_036Z-eresolve-report.txt
+
+npm error A complete log of this run can be found in: /Users/eun_ji/.npm/_logs/2024-08-19T23_11_19_036Z-debug-0.log
+
+https://www.korecmblog.com/blog/ERESOLVE-unable-to-resolve-dependency-tree
+
+요렇게 해결!
+
+$ npm i -D postcss autoprefixer -legacy-peer-deps
+
